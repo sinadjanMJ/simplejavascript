@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>Dom 2: Discussion</title>
+</head>
+
+<body>
+
+    <div class="parent">
+        
+        <div class="container">
+            
+            <div onclick="myf()" class="btn m">Button 1</div>
+            <div onclick="myfu()" class="btn i">Button 2</div>
+            <div onclick="myfun()" class="btn c">Button 3</div>
+            <div onclick="myfunc()" class="btn h">Button 4</div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body{
+ background-image: url('download.jpg');
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+    .parent {
+        padding: 10px;
+    }
+
+    .container {
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        background: coral;
+        height: 50px;
+        min-width: 100px;
+        margin: 10px
+    }
+
+    .active {
+        background-color: gray;
+    }
+</style>
+<script>
+    document.querySelector(".containers");
+
+    var m = document.querySelector(".m");
+    var i = document.querySelector(".i");
+    var c = document.querySelector(".c");
+    var h = document.querySelector(".h");
+
+
+    function myf() {
+
+        if (m.classList.contains("active") == false) {
+            m.classList.add("active");
+        } else {
+            m.classList.remove("active");
+        }
+    }
+
+
+    function myfu() {
+
+        if (i.classList.contains("active") == false) {
+            i.classList.add("active");
+        } else {
+            i.classList.remove("active");
+        }
+    }
+
+
+    function myfun() {
+
+        if (c.classList.contains("active") == false) {
+            c.classList.add("active");
+        } else {
+            c.classList.remove("active");
+        }
+    }
+
+
+    function myfunc() {
+
+        if (h.classList.contains("active") == false) {
+            h.classList.add("active");
+        } else {
+            h.classList.remove("active");
+        }
+    }
+
+
+
+</script>
+
+</html>
