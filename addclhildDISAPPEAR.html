@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    <button>CLICK</button>
+    
+    <h2 class="MJ">MICHAEL JAY</h2>
+    
+    <script>
+       
+        const el = document.querySelector("h2");
+        el.addEventListener("click", () => {
+            document.querySelector(".MJ").remove();
+        });
+
+        var btn = document.querySelector("button");
+
+
+        btn.addEventListener("click", () => {
+            const childElement = document.createElement("h2")
+            childElement.innerHTML = "<h2>MICHAEL JAY</h2>";
+
+            childElement.addEventListener("click", () => {
+                document.querySelector("h2").remove();
+            });
+            const parent = document.querySelector("body");
+            parent.appendChild(childElement);
+        });
+
+    </script>
+</body>
+
+</html>
